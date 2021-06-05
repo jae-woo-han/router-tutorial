@@ -1,0 +1,26 @@
+.calender{
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.calender-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cadetblue;
+}
+.calender-content {
+  display: grid;
+  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  justify-content: space-around;
+}
+.month {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.week{
+    text-align: center;
+}
+.day {
+    border: groove 0.5px #3f3f1f;
+}
