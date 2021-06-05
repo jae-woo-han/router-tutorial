@@ -1,7 +1,7 @@
-.calender{
-    width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
+.calender {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 .calender-title {
   display: flex;
@@ -11,16 +11,22 @@
 }
 .calender-content {
   display: grid;
-  grid-template-columns: 14% 14% 14% 14% 14% 14% 14%;
+  grid-template-columns: repeat(7, 1fr);
   justify-content: space-around;
 }
 .month {
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 3rem;
+  font-weight: bold;
 }
-.week{
-    text-align: center;
+.week {
+  text-align: center;
 }
 .day {
-    border: groove 0.5px #3f3f1f;
+  border: groove 0.5px #3f3f1f;
+  cursor: pointer;
+  width: 98%;
+  height: 6rem;
+}
+.other {
+  opacity: 0.5;
 }

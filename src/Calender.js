@@ -17,6 +17,7 @@ const Calender = () => {
     for (let i = 0; i < startDayOfWeekNum; i++) {
         const preDate = moment().month(month-2);
         let dayObject = {
+            className : "day other",
             month: preDate.format("M"),
             day: preDate.endOf("month").format("D")-(startDayOfWeekNum-i-1),
             week: preDate.date(i).format("dd"),
@@ -27,6 +28,7 @@ const Calender = () => {
     //해당 월의 일자들 넣기
     for (let i = 1; i <= date.endOf("month").format("D"); i++) {
       let dayObject = {
+        className : "day",
         month: month,
         day: i,
         week: date.date(i).format("dd"),
@@ -40,6 +42,7 @@ const Calender = () => {
     for (let i = 1; i <= date.endOf("month").format("d"); i++) {
         const nextDate = moment().month(month);
         let dayObject = {
+            className : "day other",
             month: nextDate.format("M"),
             day: i,
             week: nextDate.date(i).format("dd"),
@@ -80,7 +83,7 @@ const Calender = () => {
           <div>토</div>
         </div>
         {calenderData.map((dayObject) => (
-          <div className="day">
+          <div className={dayObject.className}>
             <div>{dayObject.day}</div>
             <div>내용</div>
           </div>
